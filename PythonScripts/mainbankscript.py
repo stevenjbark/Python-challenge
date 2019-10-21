@@ -42,7 +42,10 @@ average = total / totalmonths
 
 #Average change would be for each month, how much did the profits/losses
 #change in the next row. Will construct a new change list to store this
-#information..
+#information. Bank profits/losses from month(i) are subtracted from month(i+1)
+#to calculate the difference. This is iterated down all of the months to 
+#give a new list change. There will be 85 elements in this list where
+#banklist has 86 (you can't calculate a difference on Month 1).
 change = []
 
 for i in range(len(banklist)-1):
