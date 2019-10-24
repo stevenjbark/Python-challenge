@@ -90,13 +90,13 @@ print(f"Greatest Decrease in Profits: {decreasemin[0]}, ${decreasemin[1]}")
 #the data from printing into the file.
 with open("FinancialData.csv", 'w', newline='') as FD:
     csvwriter = csv.writer(FD, delimiter = ',')
-    csvwriter.writerow([1, "Financial Analysis"])
-    csvwriter.writerow([2, "-------------------------------------------------"])
-    csvwriter.writerow([3, (f"Total Months: {totalmonths}")])
-    csvwriter.writerow([4, (f"Total: ${total}")])
-    csvwriter.writerow([5, (f"Average Change: {averagechange}")])
-    csvwriter.writerow([6, (f"Greatest Increase in Profits: {increasemax[0]}, ${increasemax[1]}")])
-    csvwriter.writerow([7, (f"Greatest Decrease in Profits: {decreasemin[0]}, ${decreasemin[1]}")])
+    csvwriter.writerow([("Financial Analysis")])
+    csvwriter.writerow([("-------------------------------------------------")])
+    csvwriter.writerow([(f"Total Months: {totalmonths}")])
+    csvwriter.writerow([(f"Total: ${total}")])
+    csvwriter.writerow([(f"Average Change: {averagechange}")])
+    csvwriter.writerow([(f"Greatest Increase in Profits: {increasemax[0]}, ${increasemax[1]}")])
+    csvwriter.writerow([(f"Greatest Decrease in Profits: {decreasemin[0]}, ${decreasemin[1]}")])
 
 
 
